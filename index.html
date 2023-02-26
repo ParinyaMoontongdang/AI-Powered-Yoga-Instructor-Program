@@ -1,179 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI YOGA</title>
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/headers.css">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI YOGA</title>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/headers.css">
 </head>
+
 <body>
 
-    <!-- Start NarBar -->
+  <!-- Start NarBar -->
 
-    <div id="home" class="container">
-        <header class="d-flex justify-content-center py-3">
-            <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-                AI YOGA
-            </a>
-          <ul class="nav nav-pills">
-            <li class="nav-item"><a href="#home" class="nav-link" aria-current="page">Home</a></li>
-            <li class="nav-item"><a href="#yoga_pose" class="nav-link">Yoga pose</a></li>
-            <li class="nav-item"><a href="#object_detection" class="nav-link">Object Detection</a></li>
-            <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-          </ul>
-        </header>
+  <div id="home" class="container">
+    <header class="d-flex justify-content-center py-3">
+      <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+        AI YOGA
+      </a>
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="#home" class="nav-link" aria-current="page">Home</a></li>
+        <li class="nav-item"><a href="#yoga_pose" class="nav-link">Yoga pose</a></li>
+        <li class="nav-item"><a href="#object_detection" class="nav-link">Object Detection</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+      </ul>
+    </header>
+  </div>
+
+  <!-- End NarBar -->
+
+  <!-- Start yoga -->
+
+  <div id="yoga" class="px-4 pt-5 my-5 text-center border-bottom">
+    <h1 class="display-4 fw-bold">โยคะ คืออะไร?</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">โยคะ (Yoga) การรวมกาย จิต และวิญญาณ ให้เป็นหนึ่งเดียว การฝึกโยคะเป็นกระบวนการสำหรับฝึกกาย
+        ฝึกการหายใจ และฝึกจิตให้มีความจดจ่อกับเรื่องลมหายใจเข้าออก อันจะนำไปสู่การมีสมาธิที่ดีขึ้น
+        อีกทั้งมีประโยชน์ต่อสุขภาพร่างกายและจิตใจสําหรับคนทุกวัย และหากคุณกําลังรู้สึกไม่สบายตัว ฟื้นตัวจากการผ่าตัด
+        หรือใช้ชีวิตด้วยอาการเรื้อรัง
+        โยคะอาจกลายเป็นส่วนสําคัญของการรักษาของคุณและอาจเร่งการรักษาให้มีประสิทธิภาพมากยิ่งขึ้น</p>
+    </div>
+  </div>
+
+  <!-- End yoga -->
+
+  <!-- Start manual -->
+  <div id="manual" class="px-4 pt-5 my-5 text-center border-bottom">
+    <h1 class="display-4 fw-bold">วิธีใช้งาน AI YOGA</h1>
+    <div class="col-lg-6 mx-auto">
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+        <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">เริ่มต้นการใช้งาน</button>
       </div>
+    </div>
+    <div class="overflow-hidden" style="max-height: 30vh;">
+      <div class="container px-5">
+        <img src="bootstrap-docs.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700"
+          height="500" loading="lazy">
+      </div>
+    </div>
+  </div>
+  <!-- End manual -->
 
-      <!-- End NarBar -->
+  <!-- Start yoga pose-->
+  <div id="yoga_pose" class="container px-4 py-5" id="custom-cards">
+    <h2 class="pb-2 border-bottom">5 ท่าโยคะพื้นฐาน</h2>
 
-      <!-- Start yoga -->
-
-      <div id="yoga" class="px-4 pt-5 my-5 text-center border-bottom">
-        <h1 class="display-4 fw-bold">โยคะ คืออะไร?</h1>
-        <div class="col-lg-6 mx-auto">
-          <p class="lead mb-4">โยคะ (Yoga) การรวมกาย จิต และวิญญาณ ให้เป็นหนึ่งเดียว การฝึกโยคะเป็นกระบวนการสำหรับฝึกกาย ฝึกการหายใจ และฝึกจิตให้มีความจดจ่อกับเรื่องลมหายใจเข้าออก อันจะนำไปสู่การมีสมาธิที่ดีขึ้น อีกทั้งมีประโยชน์ต่อสุขภาพร่างกายและจิตใจสําหรับคนทุกวัย และหากคุณกําลังรู้สึกไม่สบายตัว ฟื้นตัวจากการผ่าตัด หรือใช้ชีวิตด้วยอาการเรื้อรัง โยคะอาจกลายเป็นส่วนสําคัญของการรักษาของคุณและอาจเร่งการรักษาให้มีประสิทธิภาพมากยิ่งขึ้น</p>
+    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+          style="background-image: url('yoga_pose/1.png'); background-position: center; background-size: cover; background-repeat: no-repeat;">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">ท่าเทพธิดา</h3>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="d-flex justify-content-end me-3">
+                <small><a class="nav-link" href="https://tumdaina.com/goddess-squat-pose/">อ่านเพิ่มเติม</a></small>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <!-- End yoga -->
-      
-      <!-- Start manual -->
-       <div id="manual" class="px-4 pt-5 my-5 text-center border-bottom">
-        <h1 class="display-4 fw-bold">วิธีใช้งาน AI YOGA</h1>
-        <div class="col-lg-6 mx-auto">
-          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-            <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">เริ่มต้นการใช้งาน</button>
-          </div>
-        </div>
-        <div class="overflow-hidden" style="max-height: 30vh;">
-          <div class="container px-5">
-            <img src="bootstrap-docs.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
-          </div>
-        </div>
-      </div>
-      <!-- End manual -->
-      
-      <!-- Start yoga pose-->
-      <div id="yoga_pose" class="container px-4 py-5" id="custom-cards">
-        <h2 class="pb-2 border-bottom">5 ท่าโยคะพื้นฐาน</h2>
-    
-        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-          <div class="col">
-            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('yoga_pose/1.png'); background-position: center; background-size: cover; background-repeat: no-repeat;">
-              <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">ท่าเทพธิดา</h3>
-                <ul class="d-flex list-unstyled mt-auto">
-                  <li class="d-flex justify-content-end me-3">
-                    <small><a class="nav-link" href="https://tumdaina.com/goddess-squat-pose/">อ่านเพิ่มเติม</a></small>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-    
-          <div class="col">
-            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('yoga_pose/2.png'); background-position: center; background-size: cover; background-repeat: no-repeat;">
-              <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">ท่าดาวน์ด็อก</h3>
-                <ul class="d-flex list-unstyled mt-auto">
-                  <li class="d-flex justify-content-end me-3">
-                    <small><a class="nav-link" href="https://www.fitmesport.com/basic-yoga-poses/#1">อ่านเพิ่มเติม</a></small>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('yoga_pose/3.png'); background-position: center; background-size: cover; background-repeat: no-repeat;">
-              <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">ท่าไม้กระดาน</h3>
-                <ul class="d-flex list-unstyled mt-auto">
-                  <li class="d-flex justify-content-end me-3">
-                    <small><a class="nav-link" href="https://yosana.co/blogs/yoga-blog/yoga-for-lose-belly/">อ่านเพิ่มเติม</a></small>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('yoga_pose/4.png'); background-position: center; background-size: cover; background-repeat: no-repeat;">
-              <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">ท่าต้นไม้</h3>
-                <ul class="d-flex list-unstyled mt-auto">
-                  <li class="d-flex justify-content-end me-3">
-                    <small><a class="nav-link" href="https://www.fitmesport.com/basic-yoga-poses/#3">อ่านเพิ่มเติม</a></small>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-    
-          <div class="col">
-            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('yoga_pose/5.png'); background-position: center; background-size: cover; background-repeat: no-repeat;">
-              <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">ท่านักรบ</h3>
-                <ul class="d-flex list-unstyled mt-auto">
-                  <li class="d-flex justify-content-end me-3">
-                    <small><a class="nav-link" href="https://www.fitmesport.com/basic-yoga-poses/#2">อ่านเพิ่มเติม</a></small>
-                  </li>
-                </ul>
-              </div>
-            </div>
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+          style="background-image: url('yoga_pose/2.png'); background-position: center; background-size: cover; background-repeat: no-repeat;">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">ท่าดาวน์ด็อก</h3>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="d-flex justify-content-end me-3">
+                <small><a class="nav-link"
+                    href="https://www.fitmesport.com/basic-yoga-poses/#1">อ่านเพิ่มเติม</a></small>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-      <!-- End yoga pose -->
 
-      <!-- Start object detection -->
-      <div id="object_detection" class="container col-xxl-8 px-4 py-5">
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-          <div class="col-10 col-sm-8 col-lg-6">
-            <img src="/object_detection/1.PNG" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
-          </div>
-          <div class="col-lg-6">
-            <h1 class="display-5 fw-bold lh-1 mb-3">Object Detection คืออะไร?</h1>
-            <p class="lead">"เทคโนโลยีตรวจจับวัตถุ" (Object detection) คือ หนึ่งในฟีเจอร์หลักของ AI โดยสามารถตรวจจับวัตถุโดยใช้ AI มาวิเคราะห์ข้อมูล จากการมองเห็นของคอมพิวเตอร์และการประมวลผลภาพเพื่อตรวจจับวัตถุที่อยู่ในรูปหรือวิดีโอ เช่น มนุษย์ สัตว์ สิ่งของ และวัตถุอื่น ๆ ที่อยู่ในรูปภาพ​</p>
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+          style="background-image: url('yoga_pose/3.png'); background-position: center; background-size: cover; background-repeat: no-repeat;">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">ท่าไม้กระดาน</h3>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="d-flex justify-content-end me-3">
+                <small><a class="nav-link"
+                    href="https://yosana.co/blogs/yoga-blog/yoga-for-lose-belly/">อ่านเพิ่มเติม</a></small>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-      <!-- End object detection-->
 
-      <!-- Start about -->
-      <div id="about" class="bg-dark text-secondary px-4 py-5 text-center">
-        <div class="py-5">
-          <h1 class="display-5 fw-bold text-white">เกี่ยวกับเรา</h1>
-          <div class="col-lg-6 mx-auto">
-            <p class="fs-5 mb-4">โปรแกรม AI Powered Yoga lntructor Program เป็นโปรแกรมประเภทเสริมทักษะการเรียนรู้ท่าโยคะที่ถูกพัฒนาโดยทีมนักเรียนจากโรงประลองต้นแบบทางวิศวกรรม โรงเรียนจักรคำคณาทร จังหวัดลำพูน เพื่อเข้าร่วมการแข่งขัน National Software Contest 2023</p>
-            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-              <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold"><a href="about.html" class="nav-link">อ่านเพิ่มเติม</a></button>
-            </div>
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+          style="background-image: url('yoga_pose/4.png'); background-position: center; background-size: cover; background-repeat: no-repeat;">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">ท่าต้นไม้</h3>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="d-flex justify-content-end me-3">
+                <small><a class="nav-link"
+                    href="https://www.fitmesport.com/basic-yoga-poses/#3">อ่านเพิ่มเติม</a></small>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-      <!-- End about -->
 
-      <!-- Start footer -->
-      <div id="footer" class="container">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-          <div class="col-md-4 d-flex align-items-center">
-            <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-              <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
-            </a>
-            <span class="mb-3 mb-md-0 text-muted">Copyright © 2022 Fablab-CKK. All rights reserved.</span>
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+          style="background-image: url('yoga_pose/5.png'); background-position: center; background-size: cover; background-repeat: no-repeat;">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">ท่านักรบ</h3>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="d-flex justify-content-end me-3">
+                <small><a class="nav-link"
+                    href="https://www.fitmesport.com/basic-yoga-poses/#2">อ่านเพิ่มเติม</a></small>
+              </li>
+            </ul>
           </div>
-    
-          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-            <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold"><a href="#home" class="nav-link">Top</a></button>
-          </div>
-        </footer>
+        </div>
       </div>
-      <!-- End footer -->
+    </div>
+  </div>
+  <!-- End yoga pose -->
 
-    <script src="js/bootstrap.min.js"></script>
+  <!-- Start object detection -->
+  <div id="object_detection" class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="/object_detection/1.PNG" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700"
+          height="500" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold lh-1 mb-3">Object Detection คืออะไร?</h1>
+        <p class="lead">"เทคโนโลยีตรวจจับวัตถุ" (Object detection) คือ หนึ่งในฟีเจอร์หลักของ AI
+          โดยสามารถตรวจจับวัตถุโดยใช้ AI มาวิเคราะห์ข้อมูล
+          จากการมองเห็นของคอมพิวเตอร์และการประมวลผลภาพเพื่อตรวจจับวัตถุที่อยู่ในรูปหรือวิดีโอ เช่น มนุษย์ สัตว์ สิ่งของ
+          และวัตถุอื่น ๆ ที่อยู่ในรูปภาพ​</p>
+      </div>
+    </div>
+  </div>
+  <!-- End object detection-->
+
+  <!-- Start about -->
+  <div id="about" class="bg-dark text-secondary px-4 py-5 text-center">
+    <div class="py-5">
+      <h1 class="display-5 fw-bold text-white">เกี่ยวกับเรา</h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="fs-5 mb-4">โปรแกรม AI Powered Yoga lntructor Program
+          เป็นโปรแกรมประเภทเสริมทักษะการเรียนรู้ท่าโยคะที่ถูกพัฒนาโดยทีมนักเรียนจากโรงประลองต้นแบบทางวิศวกรรม
+          โรงเรียนจักรคำคณาทร จังหวัดลำพูน เพื่อเข้าร่วมการแข่งขัน National Software Contest 2023</p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+          <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold"><a href="about.html"
+              class="nav-link">อ่านเพิ่มเติม</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End about -->
+
+  <!-- Start footer -->
+  <div id="footer" class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <div class="col-md-4 d-flex align-items-center">
+        <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+          <svg class="bi" width="30" height="24">
+            <use xlink:href="#bootstrap"></use>
+          </svg>
+        </a>
+        <span class="mb-3 mb-md-0 text-muted">Copyright © 2022 Fablab-CKK. All rights reserved.</span>
+      </div>
+
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold"><a href="#home"
+            class="nav-link">Top</a></button>
+      </div>
+    </footer>
+  </div>
+  <!-- End footer -->
+
+  <script src="js/bootstrap.min.js"></script>
 </body>
+
 </html>
