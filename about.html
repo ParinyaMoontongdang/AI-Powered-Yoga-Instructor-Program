@@ -9,7 +9,9 @@
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/about.css">
-  ???
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Prompt:wght@500&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
@@ -34,13 +36,68 @@
 
   <!-- Start Fablab -->
   <div id="fablab" class="px-4 pt-5 my-5 text-center border-bottom">
-    <h1 class="display-4 fw-bold">ABOUT US</h1>
-    <div class="overflow-hidden text-danger" style="max-height: 30vh;">
-******
+    <h1 class="display-4 fw-bold" style="font-family: 'Prompt', sans-serif;">ABOUT US</h1>
+    <div class="overflow-hidden" style="max-height: 30vh;">
+    <!-- Carousel -->
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+      <!-- Indicators/dots -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="5"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="6"></button>
+      </div>
+      
+      <!-- The slideshow/carousel -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/fablab_photo/1.png" alt="" class="d-block" style="width:100%">
+        </div>
+        <div class="carousel-item">
+          <img src="/fablab_photo/2.png" alt="" class="d-block" style="width:100%">
+        </div>
+        <div class="carousel-item">
+          <img src="/fablab_photo/3.png" alt="" class="d-block" style="width:100%">
+        </div>
+        <div class="carousel-item">
+          <img src="/fablab_photo/4.png" alt="" class="d-block" style="width:100%">
+        </div>
+        <div class="carousel-item">
+          <img src="/fablab_photo/5.png" alt="" class="d-block" style="width:100%">
+        </div>
+        <div class="carousel-item">
+          <img src="/fablab_photo/6.png" alt="" class="d-block" style="width:100%">
+        </div>
+      </div>
+      
+      <!-- Left and right controls/icons -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
     </div>
-    <h2 class="fw-normal">โรงประลองต้นแบบทางวิศวกรรม โรงเรียนจักรคำคณาทร จังหวัดลำพูน</h2>
+    </div>
+    <h2 class="fw-normal" style="font-family: 'Prompt', sans-serif;">โรงประลองต้นแบบทางวิศวกรรม โรงเรียนจักรคำคณาทร จังหวัดลำพูน</h2>
     <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4">
+      <p class="lead mb-4" style="font-family: 'Kanit', sans-serif;">
         โรงประลองต้นแบบทางวิศวกรรมเพื่อพัฒนาทักษะความเป็นนวัตกรแก่เยาวชนไทยส่งเสริมให้มีการจัดพื้นที่การเรียนรู้
         “โรงประลองต้นแบบทางวิศวกรรม ” ในสถานศึกษา สำหรับนักเรียนและครู ให้มีทักษะด้านวิศวกรรมที่มีความคิดสร้างสรรค์
         สามารถออกแบบสร้างชิ้นงานโดยการใช้เครื่องมือทางวิศวกรรมรวมทั้งเกิดแรงบันดาลใจและสนใจที่จะมีอาชีพเป็นวิศวกรหรือนวัตกรในอนาคต
@@ -55,23 +112,22 @@
   <!-- End Fablab -->
 
   <!-- Start Adviser Bio -->
-  <div id="adviser" class="row px-5 py-5 my-5 justify-content-center text-center border-bottom"
-    style="column-gap: 50px;">
-    <h1 class="display-4 fw-bold">อาจารย์ที่ปรึกษา</h1>
+  <div id="adviser" class="row px-5 py-5 my-5 justify-content-center text-center border-bottom" style="column-gap: 50px;">
+    <h1 class="display-4 fw-bold" style="font-family: 'Prompt', sans-serif;">อาจารย์ที่ปรึกษา</h1>
 
     <div class="card mt-5" style="max-width: 400px;">
       <img class="card-img-top mt-3 mb-2" src="bio_image/1.png" alt="Card image"
         style="width:100%; border-radius: 30px;">
       <div class="card-body">
-        <h1 class="card-title">อาจารย์พิชิต คำบุรี</h1>
-        <p class="card-text">ตำแหน่ง: ครูวิทยฐานะ ชำนาญการ </p>
-        <p class="card-text">วุฒิการศึกษา: วิทยาศาสตรมหาบัณทิต (วท.ม.) ชีววิทยาศึกษา คณะวิทยาศาสตร์ มหาวิทยาลัยบูรพา
+        <h1 class="card-title" style="font-family: 'Prompt', sans-serif;">อาจารย์พิชิต คำบุรี</h1>
+        <p class="card-text" style="font-family: 'Kanit', sans-serif;">ตำแหน่ง: ครูวิทยฐานะ ชำนาญการ </p>
+        <p class="card-text" style="font-family: 'Kanit', sans-serif;">วุฒิการศึกษา: วิทยาศาสตรมหาบัณทิต (วท.ม.) ชีววิทยาศึกษา คณะวิทยาศาสตร์ มหาวิทยาลัยบูรพา
           จังหวัดชลบุรี</p>
-        <p class="card-text">โทร: 065-4699297</p>
-        <p class="card-text">Email: locule.bio@gmail.com </p>
-        <p class="card-text">Facebook: เฮือนฝ้ายลายคำ แห่งหริภุญชัยนคร </p>
-        <h4>ผลงานวิชาการและรางวัลที่ได้รับ</h4>
-        <p class="card-text">(1) การพัฒนาผู้เรียนด้วยศูนย์การเรียนรู้โรงประลองต้นแบบทางวิศวกรรม (Fabrication Lab) และ
+        <p class="card-text" style="font-family: 'Kanit', sans-serif;">โทร: 065-4699297</p>
+        <p class="card-text" style="font-family: 'Kanit', sans-serif;">Email: locule.bio@gmail.com </p>
+        <p class="card-text" style="font-family: 'Kanit', sans-serif;">Facebook: เฮือนฝ้ายลายคำ แห่งหริภุญชัยนคร </p>
+        <h4 style="font-family: 'Prompt', sans-serif;">ผลงานวิชาการและรางวัลที่ได้รับ</h4>
+        <p class="card-text" style="font-family: 'Kanit', sans-serif;">(1) การพัฒนาผู้เรียนด้วยศูนย์การเรียนรู้โรงประลองต้นแบบทางวิศวกรรม (Fabrication Lab) และ
           สะเต็มศึกษา (STEM Education) สู่การเป็นนักนวัตกรแห่งศตวรรษที่ 21 (The development of the student competency
           focusing on Fabrication Lab and STEM Education for being the innovators in the 21st century.) (2)
           รางวัลครูผู้สร้างการเปลี่ยนแปลงในชีวิตลูกศิษย์และเป็นผู้มีคุณูปการต่อการศึกษา จังหวัดลำพูน ให้แก่ครู
@@ -86,14 +142,14 @@
       <img class="card-img-top mt-3 mb-2" src="bio_image/2.png" alt="Card image"
         style="width:100%; border-radius: 30px;">
       <div class="card-body">
-        <h1 class="card-title">อาจารย์ธีรเมธ ข่าทิพย์พาที</h1>
-        <p class="card-text">ตำแหน่ง: วิศวกรที่ปรึกษา</p>
-        <p class="card-text">วุฒิการศึกษา: ป.ตรี วิศวกรรมศาสตรบัญฑิต สาขาวิศวกรรมไฟฟ้า มหาวิทยาลัยพะเยา</p>
-        <p class="card-text">โทร: 065-9859542</p>
-        <p class="card-text">Email: theeramet_k@chakkham.ac.th </p>
-        <p class="card-text">Facebook: Bigg S'sucker</p>
-        <h4>ผลงานวิชาการและรางวัลที่ได้รับ</h4>
-        <p class="card-text">(1) ผ่านการทดสอบจากสภาวิศวกร สามารถประกอบวิชาชีพวิศวกรควบคุมระดับ ภาคีวิศวกร สาขางานไฟฟ้า
+        <h1 class="card-title" style="font-family: 'Prompt', sans-serif;">อาจารย์ธีรเมธ ข่าทิพย์พาที</h1>
+        <p class="card-text" style="font-family: 'Kanit', sans-serif;">ตำแหน่ง: วิศวกรที่ปรึกษา</p>
+        <p class="card-text" style="font-family: 'Kanit', sans-serif;">วุฒิการศึกษา: ป.ตรี วิศวกรรมศาสตรบัญฑิต สาขาวิศวกรรมไฟฟ้า มหาวิทยาลัยพะเยา</p>
+        <p class="card-text" style="font-family: 'Kanit', sans-serif;">โทร: 065-9859542</p>
+        <p class="card-text" style="font-family: 'Kanit', sans-serif;">Email: theeramet_k@chakkham.ac.th </p>
+        <p class="card-text" style="font-family: 'Kanit', sans-serif;">Facebook: Bigg S'sucker</p>
+        <h4 style="font-family: 'Prompt', sans-serif;">ผลงานวิชาการและรางวัลที่ได้รับ</h4>
+        <p class="card-text" style="font-family: 'Kanit', sans-serif;">(1) ผ่านการทดสอบจากสภาวิศวกร สามารถประกอบวิชาชีพวิศวกรควบคุมระดับ ภาคีวิศวกร สาขางานไฟฟ้า
           ไฟฟ้ากำลัง (2) ครูผู้สอนนักเรียน ได้รับรางวัลระดับเหรียญทอง รองชนะเลิศอันดับที่ 1 กิจกรรม
           โครงงานระบบสมองกลฝังตัว ม.1 - ม.3 งานศิลปหัตถกรรมครั้งที่ 70 ระดับเขตพื้นที่การศึกษาลำปาง ลำพูน</p>
       </div>
@@ -104,21 +160,21 @@
   <!-- Start Dev Bio -->
   <div id="developer" class="row px-5 py-5 my-5 justify-content-center text-center border-bottom"
     style="column-gap: 50px;">
-    <h1 class="display-4 fw-bold">ผู้พัฒนา</h1>
+    <h1 class="display-4 fw-bold" style="font-family: 'Prompt', sans-serif;">ผู้พัฒนา</h1>
 
     <div class="card mt-5" style="max-width: 400px;">
       <img class="card-img-top mt-3 mb-2" src="bio_image/3.png" alt="Card image"
         style="width:100%; border-radius: 30px;">
       <div class="card-body">
-        <h1 class="card-title">พิธิวิท เนตรคำยวง</h1>
-        <p class="card-text">ตำแหน่ง: AI Developer </p>
-        <p class="card-text">วุฒิการศึกษา: มัธยมศึกษาปีที่ 6 แผนการเรียนห้องเรียนพิเศษวิทยาศาสตร์และคณิตศาสตร์
+        <h1 class="card-title" style="font-family: 'Prompt', sans-serif;">พิธิวิท เนตรคำยวง</h1>
+        <p class="card-text" style="font-family: 'Kanit', sans-serif;">ตำแหน่ง: AI Developer </p>
+        <p class="card-text" style="font-family: 'Kanit', sans-serif;">วุฒิการศึกษา: มัธยมศึกษาปีที่ 6 แผนการเรียนห้องเรียนพิเศษวิทยาศาสตร์และคณิตศาสตร์
           โรงเรียนจักรคำคณาทร จังหวัดลำพูน</p>
-        <p class="card-text">โทร: 096-8634031</p>
-        <p class="card-text">Email: wazadafa14@gmail.com</p>
-        <p class="card-text">Facebook: Pithiwit Netkhamyuang</p>
-        <h4>ผลงานวิชาการและรางวัลที่ได้รับ</h4>
-        <p class="card-text">(1) ชนะเลิศระดับเหรียญทองระดับชาติกิจกรรมประกวดโครงงานสะตีมศึกษาแบบโปสเตอร์
+        <p class="card-text" style="font-family: 'Kanit', sans-serif;">โทร: 096-8634031</p>
+        <p class="card-text" style="font-family: 'Kanit', sans-serif;">Email: wazadafa14@gmail.com</p>
+        <p class="card-text" style="font-family: 'Kanit', sans-serif;">Facebook: Pithiwit Netkhamyuang</p>
+        <h4 style="font-family: 'Prompt', sans-serif;">ผลงานวิชาการและรางวัลที่ได้รับ</h4>
+        <p class="card-text" style="font-family: 'Kanit', sans-serif;">(1) ชนะเลิศระดับเหรียญทองระดับชาติกิจกรรมประกวดโครงงานสะตีมศึกษาแบบโปสเตอร์
           ระดับมัธยมตอนปลาย (2) รองชนะเลิศการแข่งขันการเรียนรู้แบบปัญหาผ่านกิจกรรม Thailand Green Mech Contest 2021</p>
       </div>
     </div>
@@ -127,15 +183,15 @@
       <img class="card-img-top mt-3 mb-2" src="bio_image/4.png" alt="Card image"
         style="width:100%; border-radius: 30px;">
       <div class="card-body">
-        <h1 class="card-title">ปริญญา มูลทองแดง</h1>
-        <p class="card-text">ตำแหน่ง: Web Developer</p>
-        <p class="card-text">วุฒิการศึกษา: มัธยมศึกษาปีที่ 3 แผนการเรียนห้องเรียนพิเศษวิทยาศาสตร์และคณิตศาสตร์
+        <h1 class="card-title" style="font-family: 'Prompt', sans-serif;"">ปริญญา มูลทองแดง</h1>
+        <p class="card-text" style="font-family: 'Kanit', sans-serif;">ตำแหน่ง: Web Developer</p>
+        <p class="card-text" style="font-family: 'Kanit', sans-serif;">วุฒิการศึกษา: มัธยมศึกษาปีที่ 3 แผนการเรียนห้องเรียนพิเศษวิทยาศาสตร์และคณิตศาสตร์
           โรงเรียนจักรคำคณาทร จังหวัดลำพูน</p>
-        <p class="card-text">โทร: 098-7461131</p>
-        <p class="card-text">Email: paype9483@gmail.com</p>
-        <p class="card-text">Facebook: Parinya Moontongdang</p>
-        <h4>ผลงานวิชาการและรางวัลที่ได้รับ</h4>
-        <p class="card-text">(1) ชนะเลิศระดับเหรียญทองระดับชาติกิจกรรมประกวดโครงงานสะตีมศึกษาแบบโปสเตอร์
+        <p class="card-text" style="font-family: 'Kanit', sans-serif;">โทร: 098-7461131</p>
+        <p class="card-text" style="font-family: 'Kanit', sans-serif;">Email: paype9483@gmail.com</p>
+        <p class="card-text" style="font-family: 'Kanit', sans-serif;">Facebook: Parinya Moontongdang</p>
+        <h4 style="font-family: 'Prompt', sans-serif;">ผลงานวิชาการและรางวัลที่ได้รับ</h4>
+        <p class="card-text" style="font-family: 'Kanit', sans-serif;">(1) ชนะเลิศระดับเหรียญทองระดับชาติกิจกรรมประกวดโครงงานสะตีมศึกษาแบบโปสเตอร์
           ระดับมัธยมตอนต้น (2) ชนะเลิศระดับเหรียญทองระดับชาติประเภทสิ่งประดิษฐ์ทางวิทยาศาสตร์
           งานศิลปหัตกรรมนักเรียนครั้งที่ 70 ระดับมัธยมศึกษาตอนต้น (3) รางวัลผมเชยจากการแข่งขันประกวดไอเดีย CAMT MetaEd
           Contest 2022 ในหัวข้อ มาร่วมการสร้างโลกการศึกษาในอนาคตของคุณ
@@ -147,15 +203,15 @@
       <img class="card-img-top mt-3 mb-2" src="bio_image/5.png" alt="Card image"
         style="width:100%; border-radius: 30px;">
       <div class="card-body">
-        <h1 class="card-title">พายุภัทร บุญท้าวแก้ว</h1>
-        <p class="card-text">ตำแหน่ง: Web Developer & Reporter</p>
-        <p class="card-text">วุฒิการศึกษา: มัธยมศึกษาปีที่ 3 แผนการเรียนห้องเรียนพิเศษวิทยาศาสตร์และคณิตศาสตร์
+        <h1 class="card-title" style="font-family: 'Prompt', sans-serif;">พายุภัทร บุญท้าวแก้ว</h1>
+        <p class="card-text" style="font-family: 'Kanit', sans-serif;">ตำแหน่ง: Web Developer & Reporter</p>
+        <p class="card-text" style="font-family: 'Kanit', sans-serif;">วุฒิการศึกษา: มัธยมศึกษาปีที่ 3 แผนการเรียนห้องเรียนพิเศษวิทยาศาสตร์และคณิตศาสตร์
           โรงเรียนจักรคำคณาทร จังหวัดลำพูน</p>
-        <p class="card-text">โทร: 065-8150439</p>
-        <p class="card-text">Email: payuphat0308@gmail.com </p>
-        <p class="card-text">Facebook: Mun Payuphat Boontaokaew</p>
-        <h4>ผลงานวิชาการและรางวัลที่ได้รับ</h4>
-        <p class="card-text">(1) ชนะเลิศระดับเหรียญทองระดับชาติกิจกรรมประกวดโครงงานสะตีมศึกษาแบบโปสเตอร์
+        <p class="card-text" style="font-family: 'Kanit', sans-serif;">โทร: 065-8150439</p>
+        <p class="card-text" style="font-family: 'Kanit', sans-serif;">Email: payuphat0308@gmail.com </p>
+        <p class="card-text" style="font-family: 'Kanit', sans-serif;">Facebook: Mun Payuphat Boontaokaew</p>
+        <h4 style="font-family: 'Prompt', sans-serif;">ผลงานวิชาการและรางวัลที่ได้รับ</h4>
+        <p class="card-text" style="font-family: 'Kanit', sans-serif;">(1) ชนะเลิศระดับเหรียญทองระดับชาติกิจกรรมประกวดโครงงานสะตีมศึกษาแบบโปสเตอร์
           ระดับมัธยมตอนต้น (2) ชนะเลิศระดับเหรียญทองระดับชาติประเภทสิ่งประดิษฐ์ทางวิทยาศาสตร์
           งานศิลปหัตกรรมนักเรียนครั้งที่ 70 ระดับมัธยมศึกษาตอนต้น (3) รางวัลผมเชยจากการแข่งขันประกวดไอเดีย CAMT MetaEd
           Contest 2022 ในหัวข้อ มาร่วมการสร้างโลกการศึกษาในอนาคตของคุณ
