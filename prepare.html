@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Prompt:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div id="startbtn">
     <!-- Start Navbar -->
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <div class="container-fluid col-md-6 mb-2 mb-md-0">
@@ -25,7 +26,7 @@
     <!-- End Navbar -->
 
     <!-- Start  Heroes-->
-    <div class="px-4 pt-5 my-5 text-center">
+    <div class="px-4 pt-5 my-5 text-center" style="display:block">
         <h1 class="display-4 fw-bold" style="font-family: 'Prompt', sans-serif;">อุปกรณ์ที่ต้องเตรียม</h1>
         <div class="overflow-hidden row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
             <div class="mx-auto d-block">
@@ -43,15 +44,36 @@
         </div>
         <div class="col-lg-6 mx-auto">
           <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-            <a href="http://localhost:5000"><button type="button" class="btn btn-primary btn-lg px-4 me-sm-3" style="font-family: 'Kanit', sans-serif;">Start</button></a>
+            <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3" style="font-family: 'Kanit', sans-serif; display:block" onclick="start()">Start</button>
           </div>
         </div>
       </div>
     <!-- End Heroes -->
+  </div>
+
+  <!-- Start Countdown -->
+    <div id="showNumber" class="text-center mx-auto" style="font-size: 30em; color: red; display: none;">3</div>
+  <!-- End Countdorn -->
+
 </body>
 </html>
 
 <!-- countdown js  -->
 <script>
+  let timer = 3;
+    let showElement = document.getElementById('showNumber');
 
+    function start(){
+        showElement.style.display = 'block';
+        document.getElementById('startbtn').style.display = 'none';
+        setInterval( () => { 
+        if(timer == 1){
+            
+            window.location = 'https://google.com'
+            return;
+        }
+        timer--;
+        showElement.innerHTML = timer.toString();
+     }, 1000)
+    }
 </script>
