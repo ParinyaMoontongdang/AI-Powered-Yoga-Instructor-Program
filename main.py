@@ -1,5 +1,5 @@
 from flask import Flask, render_template, Response
-from camera import VideoCamera
+from posedetect import VideoCamera
 
 app = Flask(__name__)
 
@@ -20,4 +20,4 @@ def video_feed():
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port='5000', debug=True)
+    app.run(host='127.0.0.1', port='5555', debug=True)
