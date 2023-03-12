@@ -36,9 +36,9 @@
         <!-- Start Example -->
         <div class="px-3 text-center mx-auto">
             <div style="max-height: 30vh;">
-                <h5 class="display-6 fw-bold" style="font-family: 'Prompt', sans-serif;">โยคะท่าเทพธิดา</h5>
+                <h5 id="ex_name" class="display-6 fw-bold" style="font-family: 'Prompt', sans-serif;">โยคะท่าเทพธิดา</h5>
                 <div class="container my-5">
-                    <img src="static/1.png" class="img-fluid border rounded-3" alt="ท่าเทพธิดา" loading="lazy">
+                    <img id="ex_img" src="static/1.png" class="img-fluid border rounded-3" alt="ท่าเทพธิดา" loading="lazy">
                 </div>
             </div>
         </div>
@@ -47,8 +47,8 @@
          <!-- Start AI -->
         <div class="px-3 text-center mx-auto">
             <div style="max-height: 30vh;">
-                <h5 class="display-6 fw-bold" style="font-family: 'Prompt', sans-serif;">โยคะท่าเทพธิดา</h5>
-                <div class="container px-5 my-5">
+                <h5 id="user_name" class="display-6 fw-bold" style="font-family: 'Prompt', sans-serif;">โยคะท่าเทพธิดา</h5>
+                <div id="user_img" class="container px-5 my-5">
                     <img id="bg" src="{{ url_for('video_feed')}}" class="img-fluid border rounded-3 mb-4" alt="AI YOGA" width="700" height="500" loading="lazy">
                 </div>
             </div>
