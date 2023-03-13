@@ -32,7 +32,7 @@
 
     <!-- Start Countdown -->
     <div class="container mx-auto">
-        <div id="showNumber" class="bg-dark text-center" style="font-size: 3rem; color: #4DCC35; font-family: 'Prompt', sans-serif; border-radius: 20px; margin-left: 70%;">00:20</div>
+        <div id="showNumber" class="bg-dark text-center btn btn-primary btn-lg px-4 me-sm-3" style="font-size: 3rem; color: #4DCC35; font-family: 'Prompt', sans-serif; border-radius: 20px; margin-left: 75%;">00:20</div>
     </div>
     <!-- End Countdorn -->
 
@@ -41,14 +41,14 @@
         <!-- Start example-->
         <div class="overflow-hidden row row-cols-1 row-cols-lg-3 align-items-stretch g-4">
             <div class="mx-auto d-block">
-                <h5 id="ex_name" class="display-6 fw-bold mb-4" style="font-family: 'Prompt', sans-serif;">โยคะท่าเทพธิดา</h5>
+                <h5 id="ex_name" class="display-6 fw-bold mb-4" style="font-family: 'Prompt', sans-serif;">โยคะท่าตัวที T</h5>
                 <img id="ex_img" src="static/1.png" alt="ท่าโยคะ" style="width: 100%; border-radius: 10px;" loading="lazy">
             </div>
             <!--End example  -->
 
             <!-- Start User -->
             <div class="mx-auto d-block">
-                <h5 id="user_name" class="display-6 fw-bold mb-4" style="font-family: 'Prompt', sans-serif;">โยคะท่าเทพธิดา</h5>
+                <h5 id="user_name" class="display-6 fw-bold mb-4" style="font-family: 'Prompt', sans-serif;">โยคะท่าตัวที T</h5>
                 <img id="bg" src="{{ url_for('video_feed')}}" alt="AI YOGA" style="width: 100%; border-radius: 10px;" loading="lazy">
             </div>
             <!-- End -->
@@ -58,11 +58,14 @@
 
     <!-- Start pause & stop -->
     <div class="container">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-          <div class="col-md-4 d-flex align-items-center mx-auto">
+        <footer class="d-flex py-3 my-4 border-top mx-auto">
+          <div class="mx-auto">
             <button type="button" class="btn btn-primary btn-lg">pause</button>
           </div>
-          <div class="col-md-4 d-flex align-items-center">
+          <div class="mx-auto">
+            <button type="button" class="btn bg-warning btn-lg">skip</button>
+          </div>
+          <div class="mx-auto">
             <button type="button" class="btn btn-danger btn-lg">stop</button>
           </div>
         </footer>
