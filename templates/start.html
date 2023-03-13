@@ -17,7 +17,7 @@
 <body>
     <!-- Start Title-->
     <div class="text-center mx-auto">
-        <div class="text-center my-5" style="font-family: 'Prompt', sans-serif; display: inline-flex; align-items: center;" >
+        <div class="text-center my-2 mt-3" style="font-family: 'Prompt', sans-serif; display: inline-flex; align-items: center;" >
             <img src="/yoga_pose/1.png" alt="logo" style="
             height:6rem;
             width:6rem;
@@ -30,32 +30,66 @@
     </div>       
     <!-- End Title -->
 
+    <!-- Start Countdown -->
+    <div class="container mx-auto">
+        <div id="showNumber" class="bg-dark text-center" style="font-size: 3rem; color: #4DCC35; font-family: 'Prompt', sans-serif; border-radius: 20px; margin-left: 70%;">00:20</div>
+    </div>
+    <!-- End Countdorn -->
+
     <!-- Start  Hero-->
-    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-10 py-1">
-
-        <!-- Start Example -->
-        <div class="px-3 text-center mx-auto">
-            <div style="max-height: 30vh;">
-                <h5 id="ex_name" class="display-6 fw-bold" style="font-family: 'Prompt', sans-serif;">โยคะท่าเทพธิดา</h5>
-                <div class="container my-5">
-                    <img id="ex_img" src="static/1.png" class="img-fluid border rounded-3" alt="ท่าเทพธิดา" loading="lazy">
-                </div>
+    <div class="px-4 pt-5 text-center">
+        <!-- Start example-->
+        <div class="overflow-hidden row row-cols-1 row-cols-lg-3 align-items-stretch g-4">
+            <div class="mx-auto d-block">
+                <h5 id="ex_name" class="display-6 fw-bold mb-4" style="font-family: 'Prompt', sans-serif;">โยคะท่าเทพธิดา</h5>
+                <img id="ex_img" src="static/1.png" alt="ท่าโยคะ" style="width: 100%; border-radius: 10px;" loading="lazy">
             </div>
-        </div>
-          <!-- End   Example-->
+            <!--End example  -->
 
-         <!-- Start AI -->
-        <div class="px-3 text-center mx-auto">
-            <div style="max-height: 30vh;">
-                <h5 id="user_name" class="display-6 fw-bold" style="font-family: 'Prompt', sans-serif;">โยคะท่าเทพธิดา</h5>
-                <div id="user_img" class="container px-5 my-5">
-                    <img id="bg" src="{{ url_for('video_feed')}}" class="img-fluid border rounded-3 mb-4" alt="AI YOGA" width="700" height="500" loading="lazy">
-                </div>
+            <!-- Start User -->
+            <div class="mx-auto d-block">
+                <h5 id="user_name" class="display-6 fw-bold mb-4" style="font-family: 'Prompt', sans-serif;">โยคะท่าเทพธิดา</h5>
+                <img id="bg" src="{{ url_for('video_feed')}}" alt="AI YOGA" style="width: 100%; border-radius: 10px;" loading="lazy">
             </div>
-        </div>
-          <!-- End   AI-->  
-
+            <!-- End -->
+        </div> 
     </div>
     <!-- End Hero -->
+
+    <!-- Start pause & stop -->
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <div class="col-md-4 d-flex align-items-center mx-auto">
+            <button type="button" class="btn btn-primary btn-lg">pause</button>
+          </div>
+          <div class="col-md-4 d-flex align-items-center">
+            <button type="button" class="btn btn-danger btn-lg">stop</button>
+          </div>
+        </footer>
+      </div>
+    <!-- End pause & stop -->
 </body>
 </html>
+
+<script>
+    let timer = 20;
+    let showElement = document.getElementById('showNumber');
+    let ex_name = document.getElementById('ex_name');
+    let ex_img = document.getElementById('ex_img');
+    let user_name = document.getElementById('user_name');
+    let user_img = document.getElementById('user_img');
+
+    function start(){
+        showElement.style.display = 'block';
+        document.getElementById('startbtn').style.display = 'none';
+        setInterval( () => { 
+        if(timer == 1){
+            
+            window.location = 'http://localhost:5555'
+            return;
+        }
+        timer--;
+        showElement.innerHTML = timer.toString();
+     }, 1000)
+    }
+</script>
