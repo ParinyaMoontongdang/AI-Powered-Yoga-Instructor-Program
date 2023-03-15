@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start - AI YOGA</title>
+    <link rel="website icon" type="png" href="">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Prompt:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/62a549aede.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Start Title-->
+    <div class="text-center mx-auto">
+        <div class="text-center my-2 mt-4" style="font-family: 'Prompt', sans-serif; display: inline-flex; align-items: center;" >
+            <img src="static/2.png" alt="logo" style=" height:4rem; width:4rem; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; margin-right: 5px;">
+            <img src="static/3.png" alt="logo" style=" height:4rem; width:4rem; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; margin-right: 20px;">
+            <h2>AI Powered Yoga Instructor Program</h2> 
+        </div>
+    </div>       
+    <!-- End Title -->
+
+    <!-- Start Countdown -->
+    <div class="container mx-auto">
+        <div id="showNumber" class="bg-dark text-center btn btn-lg px-4 me-sm-3" style="font-size: 3rem; color: #4DCC35; font-family: 'Prompt', sans-serif; border-radius: 20px; margin-left: 75%;">00:20</div>
+    </div>
+    <!-- End Countdorn -->
+
+    <!-- Start  Hero-->
+    <div class="px-4 pt-5 text-center">
+        <!-- Start example-->
+        <div class="overflow-hidden row row-cols-1 row-cols-lg-3 align-items-stretch g-4">
+            <div class="mx-auto d-block">
+                <h5 id="ex_name" class="display-6 fw-bold mb-4" style="font-family: 'Prompt', sans-serif;">โยคะท่าตัวที T</h5>
+                <img id="ex_img" src="static/1.png" alt="ท่าโยคะ" style="width: 100%; border-radius: 10px;" loading="lazy">
+            </div>
+            <!--End example  -->
+
+            <!-- Start User -->
+            <div class="mx-auto d-block">
+                <h5 id="user_name" class="display-6 fw-bold mb-4" style="font-family: 'Prompt', sans-serif;">โยคะท่าตัวที T</h5>
+                <img id="bg" src="{{ url_for('video_feed')}}" alt="AI YOGA" style="width: 100%; border-radius: 10px;" loading="lazy">
+            </div>
+            <!-- End -->
+        </div> 
+    </div>
+    <!-- End Hero -->
+
+    <!-- Start pause & stop -->
+    <div class="container">
+        <footer class="d-flex py-3 my-4 border-top mx-auto">
+          <div class="mx-auto">
+            <button type="button" class="btn btn-primary btn-lg" style="font-family: 'Kanit', sans-serif;">pause</button>
+          </div>
+          <div class="mx-auto">
+            <button type="button" class="btn bg-warning btn-lg" style="font-family: 'Kanit', sans-serif;">skip</button>
+          </div>
+          <div class="mx-auto">
+            <button type="button" class="btn btn-danger btn-lg" style="font-family: 'Kanit', sans-serif;">stop</button>
+          </div>
+        </footer>
+      </div>
+    <!-- End pause & stop -->
+</body>
+</html>
+
+<script>
+    let timer = 20;
+    let showElement = document.getElementById('showNumber');
+    let ex_name = document.getElementById('ex_name');
+    let ex_img = document.getElementById('ex_img');
+    let user_name = document.getElementById('user_name');
+    let user_img = document.getElementById('user_img');
+
+    function start(){
+        showElement.style.display = 'block';
+        document.getElementById('startbtn').style.display = 'none';
+        setInterval( () => { 
+        if(timer == 1){
+            
+            window.location = 'http://localhost:5555'
+            return;
+        }
+        timer--;
+        showElement.innerHTML = timer.toString();
+     }, 1000)
+    }
+</script>
