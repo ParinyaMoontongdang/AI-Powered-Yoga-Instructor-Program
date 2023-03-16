@@ -55,22 +55,22 @@ def gen_frames():
       right_knee_angle = calculate_angle(right_hip, right_knee, right_ankle)
       # Display angle
       cv2.putText(frame, str(round(left_elbow_angle,2)),
-                  tuple(np.multiply([left_elbow.x, left_elbow.y], [640, 480]).astype(int)),
+                  tuple(np.multiply([left_elbow.x, left_elbow.y], [1280, 720]).astype(int)),
                   cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2, cv2.LINE_AA)
       cv2.putText(frame, str(round(right_elbow_angle,2)),
-                  tuple(np.multiply([right_elbow.x, right_elbow.y], [640, 480]).astype(int)),
+                  tuple(np.multiply([right_elbow.x, right_elbow.y], [1280, 720]).astype(int)),
                   cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2, cv2.LINE_AA)
       cv2.putText(frame, str(round(left_shoulder_angle,2)),
-                  tuple(np.multiply([left_shoulder.x, left_shoulder.y], [640, 480]).astype(int)),
+                  tuple(np.multiply([left_shoulder.x, left_shoulder.y], [1280, 720]).astype(int)),
                   cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2, cv2.LINE_AA)
       cv2.putText(frame, str(round(right_shoulder_angle,2)),
-                  tuple(np.multiply([right_shoulder.x, right_shoulder.y], [640, 480]).astype(int)),
+                  tuple(np.multiply([right_shoulder.x, right_shoulder.y], [1280, 720]).astype(int)),
                   cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2, cv2.LINE_AA)
       cv2.putText(frame, str(round(left_knee_angle,2)),
-                  tuple(np.multiply([left_knee.x, left_knee.y], [640, 480]).astype(int)),
+                  tuple(np.multiply([left_knee.x, left_knee.y], [1280, 720]).astype(int)),
                   cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2, cv2.LINE_AA)
       cv2.putText(frame, str(round(right_knee_angle,2)),
-                  tuple(np.multiply([right_knee.x, right_knee.y], [640, 480]).astype(int)),
+                  tuple(np.multiply([right_knee.x, right_knee.y], [1280, 720]).astype(int)),
                   cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2, cv2.LINE_AA)
       ##### WARRIOR II / T POSE #####
       if left_elbow_angle > 165 and left_elbow_angle < 195 and right_elbow_angle > 165 and right_elbow_angle < 195:
@@ -102,7 +102,7 @@ def gen_frames():
           color = (0, 255, 0)
 
           # Write the label on the output image.
-      cv2.putText(output_image, label, (10, 30), cv2.FONT_HERSHEY_PLAIN, 2, color, 2)
+      cv2.putText(output_image, label, (20, 55), cv2.FONT_HERSHEY_PLAIN, 4, color, 4)
   #--------------------------------------------------------------------------------------------------
   #--------------------------------------------------------------------------------------------------
   # Initialize the results variable
