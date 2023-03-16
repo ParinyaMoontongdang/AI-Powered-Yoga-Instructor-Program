@@ -36,14 +36,14 @@
         <!-- Start example-->
         <div class="overflow-hidden row row-cols-1 row-cols-lg-2 align-items-stretch g-4">
             <div class="mx-auto d-block" style="margin-right: 2%;">
-                <h5 id="ex_name" class="display-6 fw-bold mb-4" style="font-family: 'Prompt', sans-serif;">โยคะท่าตัวที T</h5>
+                <h5 id="name" class="display-6 fw-bold mb-4" style="font-family: 'Prompt', sans-serif;">โยคะท่าภูเขา</h5>
                 <img id="ex_img" src="static/1.png" alt="ท่าโยคะ" style="width: 100%; border-radius: 10px;" loading="lazy">
             </div>
             <!--End example  -->
 
             <!-- Start User -->
             <div class="mx-auto d-block">
-                <h5 id="user_name" class="display-6 fw-bold mb-4" style="font-family: 'Prompt', sans-serif;">โยคะท่าตัวที T</h5>
+                <h5 id="name" class="display-6 fw-bold mb-4" style="font-family: 'Prompt', sans-serif;">โยคะท่าภูเขา</h5>
                 <img id="bg" src="{{ url_for('video_feed')}}" alt="AI YOGA" style="width: 100%; border-radius: 10px;" loading="lazy">
             </div>
             <!-- End -->
@@ -61,7 +61,7 @@
             <button type="button" class="btn bg-warning btn-lg" style="font-family: 'Kanit', sans-serif;">skip</button>
           </div>
           <div class="mx-auto">
-            <button type="button" class="btn btn-danger btn-lg" style="font-family: 'Kanit', sans-serif;">stop</button>
+            <button type="button" class="btn btn-danger btn-lg" style="font-family: 'Kanit', sans-serif;" onclick="stop()">stop</button>
           </div>
         </footer>
       </div>
@@ -72,10 +72,8 @@
 <script>
     let timer = 20;
     let showElement = document.getElementById('showNumber');
-    let ex_name = document.getElementById('ex_name');
+    let name = document.getElementById('name');
     let ex_img = document.getElementById('ex_img');
-    let user_name = document.getElementById('user_name');
-    let user_img = document.getElementById('user_img');
 
     function start(){
         showElement.style.display = 'block';
@@ -89,5 +87,9 @@
         timer--;
         showElement.innerHTML = timer.toString();
      }, 1000)
+    }
+
+    function stop(){
+        window.location = 'https://aiyoga-fablabckk.netlify.app'
     }
 </script>
