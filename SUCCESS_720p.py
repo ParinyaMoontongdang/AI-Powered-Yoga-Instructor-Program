@@ -8,6 +8,7 @@ mp_pose = mp.solutions.pose
 pose = mp_pose.Pose()
 mp_drawing = mp.solutions.drawing_utils
 cap = cv2.VideoCapture(0)
+iscorrect = 0
 # Setup Pose function for video.
 pose_video = mp_pose.Pose(static_image_mode=False, min_detection_confidence=0.5, model_complexity=1)
 #--------------------------------------------------------------------------------------------------
@@ -27,6 +28,8 @@ def calculate_angle(a, b, c):
 def gen_frames():
   def classifyPose(output_image, display=False):
       label = 'Unknown Pose' #start text
+      global iscorrect
+      iscorrect = 0
       color = (255, 0, 0) #RED 'UNKNOWN POSE'
       # Calculate angles
       #--------------------------------------------------------------------------------------------------
@@ -78,8 +81,10 @@ def gen_frames():
               if left_knee_angle > 165 and left_knee_angle < 195 or right_knee_angle > 165 and right_knee_angle < 195:
                   if left_knee_angle > 90 and left_knee_angle < 120 or right_knee_angle > 90 and right_knee_angle < 120:
                       label = 'Warrior II Pose'
+                      iscorrect = 1
               if left_knee_angle > 160 and left_knee_angle < 195 and right_knee_angle > 160 and right_knee_angle < 195:
                   label = 'T Pose'
+                  iscorrect = 1
       ##### TREE POSE #####
       if left_knee_angle > 165 and left_knee_angle < 195 or right_knee_angle > 165 and right_knee_angle < 195:
         if left_elbow_angle > 50 and left_elbow_angle < 65 and right_elbow_angle > 50 and right_elbow_angle < 65:
@@ -87,16 +92,19 @@ def gen_frames():
           if left_knee_angle > 25 and left_knee_angle < 45 or right_knee_angle > 25 and right_knee_angle < 45:
               # Specify the label of the pose that is tree pose.
               label = 'Tree Pose'
+              iscorrect = 1
       ##### LUNGE POSE #####
       if left_shoulder_angle and left_elbow_angle > 165 and left_shoulder_angle and left_elbow_angle < 195 and right_shoulder_angle and right_elbow_angle > 165 and right_shoulder_angle and right_elbow_angle < 195 :
         if left_knee_angle > 60 and left_knee_angle < 70 or right_knee_angle > 60 and right_knee_angle < 70 :
           if left_knee_angle > 125 and left_knee_angle < 140 or right_knee_angle > 125 and right_knee_angle < 140 :
             label = 'Lunge Pose'
+            iscorrect = 1
       ##### Mountain Pose #####
       if left_knee_angle > 165 and left_knee_angle < 195 and right_knee_angle > 165 and right_knee_angle < 195:
         if left_elbow_angle > 165 and left_elbow_angle < 195 and right_elbow_angle > 165 and right_elbow_angle < 195:
           if left_shoulder_angle > 0 and left_shoulder_angle < 20 and right_shoulder_angle > 0 and right_shoulder_angle < 20:
             label = 'Mountain Pose'
+            iscorrect = 1
       if label != 'Unknown Pose':
           # Update the color (to green) with which the label will be written on the image.
           color = (0, 255, 0)
@@ -132,20 +140,23 @@ def gen_frames():
 
 app = Flask(__name__)
 
+# Create start.html
 @app.route('/')
 def index():
     return render_template('start.html')
 
-def gen(camera):
-    while True:
-        frame = camera.get_frame()
-        yield (b'--frame\r\n'
-               b'Content-Type: image/jpeg\r\n\r\n' + frame
-               + b'\r\n\r\n')
-
+# response to <img>
 @app.route('/video_feed')
 def video_feed():
    return Response(gen_frames(),mimetype='multipart/x-mixed-replace; boundary=frame')
 
+# API to start.html
+@app.route('/get_status')
+def get_status():
+   return {
+      "status": iscorrect
+   }
+
+# configure port
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port='5555', debug=True)

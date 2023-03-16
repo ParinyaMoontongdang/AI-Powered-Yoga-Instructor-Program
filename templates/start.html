@@ -15,6 +15,7 @@
     <script src="https://kit.fontawesome.com/62a549aede.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div id="main">
     <!-- Start Title-->
     <div class="text-center mx-auto mt-2">
         <div class="text-center my-2 mt-4" style="font-family: 'Prompt', sans-serif; display: inline-flex; align-items: center;" >
@@ -29,7 +30,7 @@
     <div class="container mx-auto mb-3">
         <div id="showNumber" class="bg-dark text-center btn btn-lg px-4 me-sm-3" style="font-size: 3rem; color: #4DCC35; font-family: 'Prompt', sans-serif; border-radius: 20px; margin-left: 75%;">00:20</div>
     </div>
-    <!-- End Countdorn -->
+    <!-- End Countdown -->
 
     <!-- Start  Hero-->
     <div class="px-1 pt-2 text-center mt-2" style="margin-left: 5%; margin-right: 5%;">
@@ -43,7 +44,7 @@
 
             <!-- Start User -->
             <div class="mx-auto d-block">
-                <h5 id="name" class="display-6 fw-bold mb-4" style="font-family: 'Prompt', sans-serif;">โยคะท่าภูเขา</h5>
+                <h5 id="name2" class="display-6 fw-bold mb-4" style="font-family: 'Prompt', sans-serif;">โยคะท่าภูเขา</h5>
                 <img id="bg" src="{{ url_for('video_feed')}}" alt="AI YOGA" style="width: 100%; border-radius: 10px;" loading="lazy">
             </div>
             <!-- End -->
@@ -55,10 +56,10 @@
     <div class="container">
         <footer class="d-flex py-3 my-4 border-top mx-auto">
           <div class="mx-auto">
-            <button type="button" class="btn btn-primary btn-lg" style="font-family: 'Kanit', sans-serif;">pause</button>
+            <button id="pause" type="button" class="btn btn-primary btn-lg" style="font-family: 'Kanit', sans-serif;" onclick="pause_play()">pause</button>
           </div>
           <div class="mx-auto">
-            <button type="button" class="btn bg-warning btn-lg" style="font-family: 'Kanit', sans-serif;">skip</button>
+            <button type="button" class="btn bg-warning btn-lg" style="font-family: 'Kanit', sans-serif;" onclick="skip()">skip</button>
           </div>
           <div class="mx-auto">
             <button type="button" class="btn btn-danger btn-lg" style="font-family: 'Kanit', sans-serif;" onclick="stop()">stop</button>
@@ -66,6 +67,11 @@
         </footer>
       </div>
     <!-- End pause & stop -->
+    </div>
+
+    <!-- Start 3 2 1 -->
+    <div id="cd" class="text-center mx-auto" style="font-size: 30em; color: red; display: none; font-family: 'Prompt', sans-serif;">3</div>
+    <!-- End 3 2 1 -->
 </body>
 </html>
 
@@ -73,20 +79,77 @@
     let timer = 20;
     let showElement = document.getElementById('showNumber');
     let name = document.getElementById('name');
+    let name2 = document.getElementById('name2');
     let ex_img = document.getElementById('ex_img');
+    let url =  'http://127.0.0.1:5555/get_status';
+    let file_number = 1;
+    let namearray = ['','โยคะท่าภูเขา','โยคะท่าตัวที','โยคะท่าลันจ์','โยคะท่าต้นไม้','โยคะท่านักรบ']
+    let ispause = false
+
+    // Get API from SUCCESS
+    function status(){
+        fetch(url).then(function(response) {
+        return response.json();
+    }).then(function(data) {
+        console.log(data.status);
+        if (data.status == 1){
+            countdown();
+        }
+    }).catch(function(err) {
+        console.log('Fetch Error :-S', err);
+    });
+    }
+    setInterval(()=>status(),1000);
+
+    function countdown(){
+        if (!ispause){
+            timer--;
+            showElement.innerHTML = '00:' + ('0'+ timer).slice(-2)
+            if (timer == 0){
+            file_number++;
+            change_pose();
+        }
+        }
+    }
+
+    function change_pose(){
+        if (file_number <= 5){
+            let filename = file_number + '.png';
+            ex_img.src = '/static/' + filename;
+            name.innerHTML = namearray[file_number]
+            name2.innerHTML = namearray[file_number]
+            timer = 20;
+        }
+        else{
+            start();
+        }
+    }
+
+    let timer2 = 3;
+    let showElement2 = document.getElementById('cd');
 
     function start(){
-        showElement.style.display = 'block';
-        document.getElementById('startbtn').style.display = 'none';
+        document.getElementById('main').setAttribute('style','display:none')
+        showElement2.style.display = 'block';
         setInterval( () => { 
-        if(timer == 1){
+        if(timer2 == 1){
             
-            window.location = 'http://localhost:5555'
+            window.location = 'https://aiyoga-fablabckk.netlify.app'
             return;
         }
-        timer--;
-        showElement.innerHTML = timer.toString();
+        timer2--;
+        showElement2.innerHTML = timer2.toString();
      }, 1000)
+    }
+
+    function skip(){
+        file_number++;
+        change_pose();
+
+    }
+
+    function pause_play(){
+        ispause = !ispause 
     }
 
     function stop(){
