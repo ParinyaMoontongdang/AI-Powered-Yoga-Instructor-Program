@@ -1,4 +1,5 @@
 from flask import Flask, render_template, Response
+from flask_cors import CORS
 import cv2
 import mediapipe as mp
 import math
@@ -81,10 +82,10 @@ def gen_frames():
               if left_knee_angle > 165 and left_knee_angle < 195 or right_knee_angle > 165 and right_knee_angle < 195:
                   if left_knee_angle > 90 and left_knee_angle < 120 or right_knee_angle > 90 and right_knee_angle < 120:
                       label = 'Warrior II Pose'
-                      iscorrect = 1
+                      iscorrect = 5
               if left_knee_angle > 160 and left_knee_angle < 195 and right_knee_angle > 160 and right_knee_angle < 195:
                   label = 'T Pose'
-                  iscorrect = 1
+                  iscorrect = 2
       ##### TREE POSE #####
       if left_knee_angle > 165 and left_knee_angle < 195 or right_knee_angle > 165 and right_knee_angle < 195:
         if left_elbow_angle > 50 and left_elbow_angle < 65 and right_elbow_angle > 50 and right_elbow_angle < 65:
@@ -92,13 +93,13 @@ def gen_frames():
           if left_knee_angle > 25 and left_knee_angle < 45 or right_knee_angle > 25 and right_knee_angle < 45:
               # Specify the label of the pose that is tree pose.
               label = 'Tree Pose'
-              iscorrect = 1
+              iscorrect = 4
       ##### LUNGE POSE #####
       if left_shoulder_angle and left_elbow_angle > 165 and left_shoulder_angle and left_elbow_angle < 195 and right_shoulder_angle and right_elbow_angle > 165 and right_shoulder_angle and right_elbow_angle < 195 :
         if left_knee_angle > 60 and left_knee_angle < 70 or right_knee_angle > 60 and right_knee_angle < 70 :
           if left_knee_angle > 125 and left_knee_angle < 140 or right_knee_angle > 125 and right_knee_angle < 140 :
             label = 'Lunge Pose'
-            iscorrect = 1
+            iscorrect = 3
       ##### Mountain Pose #####
       if left_knee_angle > 165 and left_knee_angle < 195 and right_knee_angle > 165 and right_knee_angle < 195:
         if left_elbow_angle > 165 and left_elbow_angle < 195 and right_elbow_angle > 165 and right_elbow_angle < 195:
@@ -139,6 +140,7 @@ def gen_frames():
               frame, _ = pose_result
 
 app = Flask(__name__)
+CORS(app)
 
 # Create start.html
 @app.route('/')

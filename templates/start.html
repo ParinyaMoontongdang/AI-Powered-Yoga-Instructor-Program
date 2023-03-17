@@ -81,6 +81,7 @@
     let name = document.getElementById('name');
     let name2 = document.getElementById('name2');
     let ex_img = document.getElementById('ex_img');
+    let pause = document.getElementById('pause');
     let url =  'http://127.0.0.1:5555/get_status';
     let file_number = 1;
     let namearray = ['','โยคะท่าภูเขา','โยคะท่าตัวที','โยคะท่าลันจ์','โยคะท่าต้นไม้','โยคะท่านักรบ']
@@ -92,7 +93,7 @@
         return response.json();
     }).then(function(data) {
         console.log(data.status);
-        if (data.status == 1){
+        if (data.status == file_number){
             countdown();
         }
     }).catch(function(err) {
@@ -114,11 +115,12 @@
 
     function change_pose(){
         if (file_number <= 5){
+            timer = 20;
+            showElement.innerHTML = '00:' + ('0'+ timer).slice(-2)
             let filename = file_number + '.png';
             ex_img.src = '/static/' + filename;
             name.innerHTML = namearray[file_number]
             name2.innerHTML = namearray[file_number]
-            timer = 20;
         }
         else{
             start();
@@ -149,7 +151,13 @@
     }
 
     function pause_play(){
-        ispause = !ispause 
+        ispause = !ispause
+        if (!ispause){
+            pause.innerHTML = 'pause'
+        }
+        if (ispause){
+            pause.innerHTML = 'play'
+        }
     }
 
     function stop(){
