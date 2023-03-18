@@ -27,6 +27,7 @@ def calculate_angle(a, b, c):
   return angle
 #--------------------------------------------------------------------------------------------------
 def gen_frames():
+  cap = cv2.VideoCapture(0)
   def classifyPose(output_image, display=False):
       label = 'Unknown Pose' #start text
       global iscorrect

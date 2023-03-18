@@ -8,7 +8,6 @@ import numpy as np
 mp_pose = mp.solutions.pose
 pose = mp_pose.Pose()
 mp_drawing = mp.solutions.drawing_utils
-cap = cv2.VideoCapture(0)
 iscorrect = 0
 # Setup Pose function for video.
 pose_video = mp_pose.Pose(static_image_mode=False, min_detection_confidence=0.5, model_complexity=1)
@@ -27,6 +26,7 @@ def calculate_angle(a, b, c):
   return angle
 #--------------------------------------------------------------------------------------------------
 def gen_frames():
+  cap = cv2.VideoCapture(0)
   def classifyPose(output_image, display=False):
       label = 'Unknown Pose' #start text
       global iscorrect
