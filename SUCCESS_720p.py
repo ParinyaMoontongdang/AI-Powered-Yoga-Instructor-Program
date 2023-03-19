@@ -59,22 +59,22 @@ def gen_frames():
       left_knee_angle = calculate_angle(left_hip, left_knee, left_ankle)
       right_knee_angle = calculate_angle(right_hip, right_knee, right_ankle)
       # Display angle
-      cv2.putText(frame, str(round(left_elbow_angle,2)),
+      cv2.putText(frame, str(round(left_elbow_angle,1)),
                   tuple(np.multiply([left_elbow.x, left_elbow.y], [1280, 720]).astype(int)),
                   cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 255, 255), 2, cv2.LINE_AA)
-      cv2.putText(frame, str(round(right_elbow_angle,2)),
+      cv2.putText(frame, str(round(right_elbow_angle,1)),
                   tuple(np.multiply([right_elbow.x, right_elbow.y], [1280, 720]).astype(int)),
                   cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 255, 255), 2, cv2.LINE_AA)
-      cv2.putText(frame, str(round(left_shoulder_angle,2)),
+      cv2.putText(frame, str(round(left_shoulder_angle,1)),
                   tuple(np.multiply([left_shoulder.x, left_shoulder.y], [1280, 720]).astype(int)),
                   cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 255, 255), 2, cv2.LINE_AA)
-      cv2.putText(frame, str(round(right_shoulder_angle,2)),
+      cv2.putText(frame, str(round(right_shoulder_angle,1)),
                   tuple(np.multiply([right_shoulder.x, right_shoulder.y], [1280, 720]).astype(int)),
                   cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 255, 255), 2, cv2.LINE_AA)
-      cv2.putText(frame, str(round(left_knee_angle,2)),
+      cv2.putText(frame, str(round(left_knee_angle,1)),
                   tuple(np.multiply([left_knee.x, left_knee.y], [1280, 720]).astype(int)),
                   cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 255, 255), 2, cv2.LINE_AA)
-      cv2.putText(frame, str(round(right_knee_angle,2)),
+      cv2.putText(frame, str(round(right_knee_angle,1)),
                   tuple(np.multiply([right_knee.x, right_knee.y], [1280, 720]).astype(int)),
                   cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 255, 255), 2, cv2.LINE_AA)
       ##### WARRIOR II / T POSE #####
